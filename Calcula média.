@@ -1,0 +1,74 @@
+/******************************************************************************
+
+Calcula a media de alunos de uma sala utilizando STRUCT E FUNÇÃO.
+
+*******************************************************************************/
+#include <stdio.h>
+#define tam 3
+
+float calculamedia(float n1, float n2){
+    float resultado;
+    resultado = (n1 + n2) /2;
+    return (resultado);
+}
+
+
+
+float lenota(){
+    float nota;
+    while(nota >= 10 || nota <= 0){
+    printf("Digite um valor entre 0 e dez: ");
+    scanf("%f", &nota);
+    }
+    return nota;
+}
+
+int main()
+{
+    struct estruturaAluno{
+    int matricula;
+    float n1;
+    float n2;
+    float media;
+    char nome[30];
+    
+    
+};
+struct estruturaAluno Aluno[tam];
+    float medsala;
+    float soma=0;
+
+    printf("------------------OLÁ--------------\n");
+    for(int i=0; i<tam;i++){
+        printf("Digite sua matricula: ");
+        scanf("%d", &Aluno[i].matricula);
+        printf("Digite seu nome: ");
+        scanf("%s", Aluno[i].nome);
+        printf("Digite sua primeira nota: ");
+        Aluno[i].n1= lenota();
+        scanf("%f", &Aluno[i].n1);
+        printf("Digite sua segunda nota: ");
+        Aluno[i].n2=lenota();
+        scanf("%f", &Aluno[i].n2);
+        printf("-----------------------------------------\n");
+    }
+        for(int i=0;i<tam;i++){
+            Aluno[i].media=calculamedia(Aluno[i].n1,Aluno[i].n2);
+            soma+= Aluno[i].media;
+        }
+        medsala= soma/tam;
+        
+        for(int i=0; i<tam;i++){
+            printf("------BOLETIM ESCOLAR-------");
+            printf("\nMatricula: %d ", Aluno[i].matricula);
+            printf("\nNome do aluno: %s", Aluno[i].nome);
+            printf("\nPrimeira nota: %.1f", Aluno[i].n1);
+            printf("\nSegunda nota: %.1f", Aluno[i].n2);
+            printf("\nSua media: %.1f", Aluno[i].media);
+    
+        }
+    printf("A sala contém: %d alunos", tam);
+    printf("A média da sala é: %f", medsala);
+    
+    return 0;
+}
