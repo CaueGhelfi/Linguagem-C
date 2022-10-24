@@ -1,0 +1,29 @@
+/******************************************************************************
+
+Mostra a diferença entre 2 numeros.
+
+*******************************************************************************/
+#include <stdio.h>
+
+int diferenca(int n1, int n2){
+    int result;
+    result = n1-n2;
+    return result;
+}
+int main()
+{
+    int num1;
+    int num2;
+    int diferenca;
+    
+    printf("Digite um numero: ");
+    scanf("%d", &num1);
+    printf("Digite um outro numero: ");
+    scanf("%d", &num2);
+    
+    
+    diferenca=(num1,num2);
+    printf("A diferença entre os dois é: %d", diferenca);
+    
+    return 0;
+}
