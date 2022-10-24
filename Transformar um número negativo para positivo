@@ -1,0 +1,23 @@
+/******************************************************************************
+
+Transforma um numero negativo em um numero positivo.
+
+*******************************************************************************/
+#include <stdio.h>
+
+float positivo(float x){
+    if (x < 0)
+    x = (-1) * x;
+    return x;
+}
+
+int main()
+{
+    float valor;
+    printf("Digite um numero: \n");
+    scanf("%f", &valor);
+    
+    printf("O valor retornado foi: %f", positivo(valor));
+    
+    return 0;
+}
