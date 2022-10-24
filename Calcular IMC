@@ -1,0 +1,36 @@
+/******************************************************************************
+
+Calcular IMC utilizando struct
+
+*******************************************************************************/
+#include <stdio.h>
+
+ typedef struct{
+      float peso;
+      float altura;
+      int idade;
+  }imc;
+
+
+int main()
+{
+    imc i;
+    float result;
+    
+    
+    //entradas
+    printf("Digite seu peso: ");
+    scanf("%f", &i.peso);
+    printf("Digite sua altura: ");
+    scanf("%f", &i.altura);
+    printf("Digite sua idade: ");
+    scanf("%d", &i.idade);
+    
+    result=i.peso/i.altura;
+    
+    
+    printf("Seu imc é igual á: %.3f", result);
+    
+  
+  
+}
