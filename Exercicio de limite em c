@@ -1,0 +1,36 @@
+/******************************************************************************
+
+Cauê Mendonça Ghelfi 
+--Exercicio de recursividade em C--
+USCS-Universidade Municipal de São Caetano Do sul
+
+*******************************************************************************/
+#include <stdio.h>
+#include <stdlib.h>
+
+
+void ciclo(int n, int limite){
+    printf("%d", n);
+    if(n< limite) ciclo(n+1, limite);
+}
+
+void magico(int n){
+    printf("%d", n);
+    if(n<5) magico(n+1);
+    printf("\n%d", n);
+}
+
+void misterio(int n){
+    if (n<5){
+    misterio(n+1);
+    printf("\n%d", n);
+    misterio(n+1);
+}
+}
+int main()
+{
+    printf("O ciclo de (2,10) é: \n"); ciclo(2,10);
+    printf("\nO magico de (2) é: "); magico(2);
+    printf("\nO misterio de (2) é: "); misterio(2);
+    system ("pause");
+}
