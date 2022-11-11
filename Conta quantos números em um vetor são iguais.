@@ -1,6 +1,10 @@
 /******************************************************************************
 
+Cauê Mendonça Ghelfi
+USCS-Universidade Municipal de São Caetano do Sul
+RA- 8132252
 Exercicio que conta quantos numeros em um vetor são iguais.
+
 *******************************************************************************/
 #include <stdio.h>
 int main()
