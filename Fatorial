@@ -1,8 +1,9 @@
 /*
 
 Cauê Mendonça Ghelfi
-Fatorial em C
 USCS-Universidade Municipal de São Caetano do Sul
+RA- 8132252
+Fatorial em C
 
 */
 #include <stdio.h>
